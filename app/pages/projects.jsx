@@ -247,7 +247,7 @@ export default function TerminalPortfolio() {
           padding: 16,
         }}
       >
-        <div className="header" style={{ color: "#9fb0d9" }}>
+        <div className="mb-5" style={{ color: "#9fb0d9" }}>
           Satvik's Terminal Portfolio — type 'help'
         </div>
         <div
