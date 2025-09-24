@@ -78,11 +78,13 @@ export default function TerminalPortfolio() {
       return "Access denied.";
     },
     badapple: () => {
+      if (badappleid.current) return "Bad Apple is already playing.";
       let i = 0;
       const fps = 30;
       const interval = 1000/fps;
 
       badappleAudioRef.current = new Audio(badappleAudio);
+      badappleAudioRef.current.volume = 0.2;
 
       badappleid.current = setInterval(() => {
         if (!badappleAudioRef.current.paused) {
