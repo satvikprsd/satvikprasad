@@ -293,7 +293,7 @@ export default function TerminalPortfolio() {
                 outline: "none",
                 color: "#d8e6ff",
               }}
-              placeholder="type a command..."
+              placeholder={`${badappleid.current ? "Press (Ctrl + C) to stop." : "type a command..."}`}
             />
           </div>
         </div>
