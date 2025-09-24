@@ -113,19 +113,20 @@ export default function TerminalPortfolio() {
     neofetch: () => {
       // console.log(navigator)
       const ascii = `
-        <span className="text-[2px]" style="color:#ff5555">   ___________       guest@portfolio</span>
-        <span className="text-[2px]" style="color:#ff5555">  |.---------.|      ---------------</span>
-        <span className="text-[2px]" style="color:#50fa7b">  ||         ||     OS: Web (Next.js)</span>
-        <span className="text-[2px]" style="color:#50fa7b">  ||         ||     Host: Portfolio Web</span>
-        <span className="text-[2px]" style="color:#8be9fd">  ||         ||     Kernel: JavaScript</span>
-        <span className="text-[2px]" style="color:#8be9fd">  |'---------'|     Uptime: ${Math.floor(performance.now()/3600000)}h ${Math.floor((performance.now()/60000)%60)}m ${Math.floor((performance.now()/1000)%60)}s</span>
-        <span className="text-[2px]" style="color:#f1fa8c">  \`)__ ____('       Shell: ${rootAccess ? 'root' : 'guest'}</span>
-        <span className="text-[2px]" style="color:#f1fa8c">   [=== -- o ]--.   Resolution: ${window.innerWidth}x${window.innerHeight}</span>
-        <span className="text-[2px]" style="color:#bd93f9"> __'---------'__ \\  DE: Browser</span>
-        <span className="text-[2px]" style="color:#bd93f9">[::::::::::: :::] ) Platform: ${navigator.platform}</span>
-        <span className="text-[2px]" style="color:#ff79c6">\`""'"""""'""""\`/T\\  CPU: Web Processor</span>
-        <span className="text-[2px]" style="color:#ff79c6">               \\_/  RAM: ${navigator.deviceMemory*1024} Mib</span>
-        <span className="text-[2px]" style="color:#50fa7b">                         
+      <div class="text-[0.6em] md:text-[1.5em] lg:text-[1em]">
+        <span " style="color:#ff5555">   ___________       guest@portfolio</span>
+        <span " style="color:#ff5555">  |.---------.|      ---------------</span>
+        <span " style="color:#50fa7b">  ||         ||     OS: Web (Next.js)</span>
+        <span " style="color:#50fa7b">  ||         ||     Host: Portfolio Web</span>
+        <span " style="color:#8be9fd">  ||         ||     Kernel: JavaScript</span>
+        <span " style="color:#8be9fd">  |'---------'|     Uptime: ${Math.floor(performance.now()/3600000)}h ${Math.floor((performance.now()/60000)%60)}m ${Math.floor((performance.now()/1000)%60)}s</span>
+        <span " style="color:#f1fa8c">  \`)__ ____('       Shell: ${rootAccess ? 'root' : 'guest'}</span>
+        <span " style="color:#f1fa8c">   [=== -- o ]--.   Resolution: ${window.innerWidth}x${window.innerHeight}</span>
+        <span " style="color:#bd93f9"> __'---------'__ \\  DE: Browser</span>
+        <span " style="color:#bd93f9">[::::::::::: :::] ) Platform: ${navigator.platform}</span>
+        <span " style="color:#ff79c6">\`""'"""""'""""\`/T\\  CPU: Web Processor</span>
+        <span " style="color:#ff79c6">               \\_/  RAM: ${navigator.deviceMemory*1024} Mib</span>
+      </div>                       
       `;
       return ascii;
     },
@@ -269,7 +270,7 @@ export default function TerminalPortfolio() {
           <div className="output">
             {output.map((line, i) => (
               <div
-                className={`${badappleid.current ? 'text-[7.9px] md:text-[18px] lg:text-[10px]' : ''}`}
+                className={`${badappleid.current ? 'text-[1.85vw] md:text-[18px] lg:text-[0.62vw]' : ''}`}
                 key={i}
                 style={{ whiteSpace: "pre-wrap" }}
                 dangerouslySetInnerHTML={{ __html: line }}
@@ -277,7 +278,7 @@ export default function TerminalPortfolio() {
             ))}
           </div>
           <div
-            className={`prompt-line ${badappleid.current ? 'text-[7px]  md:text-[18px] lg:text-[10px]' : ''}`}
+            className={`prompt-line ${badappleid.current ? 'text-[1.9vw] md:text-[18px] lg:text-[10px]' : ''}`}
             style={{ display: "flex", marginTop: 8 }}
           >
             <div style={{ color: `${rootAccess ? '#ff7b7b' : '#7be4ff'}`, marginRight: 8 }}>
