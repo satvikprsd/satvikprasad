@@ -10,7 +10,7 @@ import TerminalPortfolio from "./projects"
 
 export default function HomeScreen(){
     return (
-        <div className="grid h-screen min-h-[700px] grid-cols-12 grid-rows-10 gap-4 p-4 max-lg:h-auto max-lg:grid-rows-none max-lg:py-6 transition-all duration-300 ease-in-out">
+        <div className="grid h-screen min-w-[380px] min-h-[700px] grid-cols-12 grid-rows-10 gap-4 p-4 max-lg:h-auto max-lg:grid-rows-none max-lg:py-6 transition-all duration-300 ease-in-out">
             <Loader />
             <div className="col-span-full row-span-1"><Header /></div>
             <div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
@@ -21,7 +21,7 @@ export default function HomeScreen(){
             <div className="col-span-2 row-span-5 max-lg:col-span-6 max-md:col-span-full"><ContactMe /></div>
             </div>
             <div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
-            <div className="col-span-4 row-span-8 max-lg:col-span-full"><TerminalPortfolio /></div>
+            <div className="col-span-4 row-span-8 min-w-[380px] max-lg:col-span-full"><TerminalPortfolio /></div>
             <div className="col-span-4 row-span-1 min-h-[50px] max-lg:col-span-full"><Footer /></div> 
             </div>
         </div>
